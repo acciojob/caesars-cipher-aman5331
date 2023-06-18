@@ -34,8 +34,8 @@ const lookup = {
 function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
-	for (let i = 0; i < encodeStr.length; i++) {
-    let charCode = encodeStr.charCodeAt(i);
+	for (let i = 0; i < encodedStr.length; i++) {
+    let charCode = encodedStr.charCodeAt(i);
 
     // Decode uppercase letters
     if (charCode >= 65 && charCode <= 90) {
