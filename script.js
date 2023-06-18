@@ -43,7 +43,7 @@ function rot13(encodedStr) {
       decodedArr += String.fromCharCode(decodedCharCode);
     } else {
       // Pass non-alphabetic characters as they are
-      decodedArr += str.charAt(i);
+      decodedArr += encodedstr.charAt(i);
     }
   }
 
