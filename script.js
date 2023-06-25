@@ -38,17 +38,25 @@ function rot13(encodedStr) {
     let charCode = encodedStr.charCodeAt(i);
 
     // Decode uppercase letters
-    if (charCode >= 65 && charCode <= 90) {
-      let decodedCharCode = ((charCode - 65 + 13) % 26) + 65;
-      decodedArr += String.fromCharCode(decodedCharCode);
+     if (char.match(/[A-Z]/)) {
+      // Convert the character code to ASCII value
+      let ascii = encodedStr.charCodeAt(i);
+
+      // Shift the ASCII value by 13 places
+      ascii = (ascii - 65 + 13) % 26 + 65;
+
+      // Convert the ASCII value back to a character
+      const decodedChar = String.fromCharCode(ascii);
+      decodedStr += decodedChar;
     } else {
       // Pass non-alphabetic characters as they are
-      decodedArr += encodedstr.charAt(i);
+      decodedStr += char;
     }
   }
 
-  return; //return decodedArr
-}
+  return decodedStr;
+ }
+               //return decodedArr
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
