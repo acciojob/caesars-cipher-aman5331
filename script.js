@@ -35,7 +35,7 @@ function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
 	for (let i = 0; i < encodedStr.length; i++) {
-    let charCode = encodedStr.charCodeAt(i);
+    const char = encodedStr[i];
 
     // Decode uppercase letters
      if (char.match(/[A-Z]/)) {
